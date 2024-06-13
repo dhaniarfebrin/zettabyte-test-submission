@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zettabyte Pricing</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section class="hero">
+        <h1>Simple Pricing!</h1>
+        <p>
+          The most advanced customer support tools with a simple <br />
+          and affordable pricing. And you can always try for 30 days, <br />
+          free!
+        </p>
+        <div class="pricelist">
+          <!-- price item -->
+          <div class="card" id="card-1" onclick="clickedCard(1)">
+            <div class="card-title">
+              <h3>Basic</h3>
+            </div>
+            <div class="card-content">
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="number">4</span>
+                <span class="month">/month</span>
+              </div>
+              <hr />
+              <div class="benefits">
+                <span><b>10</b> Projects</span>
+                <span><b>10</b> Pages</span>
+                <span><b>10</b> Mb Disk Space</span>
+              </div>
+            </div>
+            <div class="button-area">
+              <button class="btn" id="button" onclick="clickedButton()">
+                Buy Now
+              </button>
+            </div>
+          </div>
+          <!-- price item -->
+          <!-- price item -->
+          <div class="card" id="card-2" onclick="clickedCard(2)">
+            <div class="card-title">
+              <h3>Standard</h3>
+              <h4>Save 15%</h4>
+            </div>
+            <div class="card-content">
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="number">8</span>
+                <span class="month">/month</span>
+              </div>
+              <hr />
+              <div class="benefits">
+                <span><b>20</b> Projects</span>
+                <span><b>20</b> Pages</span>
+                <span><b>200</b> Mb Disk Space</span>
+              </div>
+            </div>
+            <div class="button-area">
+              <button class="btn" id="button" onclick="clickedButton()">
+                Buy Now
+              </button>
+            </div>
+          </div>
+          <!-- price item -->
+          <!-- price item -->
+          <div class="card" id="card-3" onclick="clickedCard(3)">
+            <div class="card-title">
+              <h3>Advanced</h3>
+            </div>
+            <div class="card-content">
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="number">12</span>
+                <span class="month">/month</span>
+              </div>
+              <hr />
+              <div class="benefits">
+                <span><b>40</b> Projects</span>
+                <span><b>40</b> Pages</span>
+                <span><b>500</b> Mb Disk Space</span>
+              </div>
+            </div>
+            <div class="button-area">
+              <button class="btn" id="button" onclick="clickedButton()">
+                Buy Now
+              </button>
+            </div>
+          </div>
+          <!-- price item -->
+        </div>
+      </section>
+      <section class="faq">
+        <h3>Frequently Asked Questions</h3>
+        <div class="question-list">
+          <div class="question-item">
+            <h6>How does free trial works?</h6>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+              ab ad tempore amet optio sunt necessitatibus debitis modi quasi
+              similique voluptas ex est, quibusdam rem illo distinctio nostrum
+              soluta consequuntur.
+            </p>
+          </div>
+          <div class="question-item">
+            <h6>Can I Cancel any time?</h6>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+              ab ad tempore amet optio sunt necessitatibus debitis modi quasi
+              similique voluptas ex est, quibusdam rem illo distinctio nostrum
+              soluta consequuntur.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <section></section>
+
+    <script>
+      function clickedButton() {
+        alert('success');
+      }
+
+      function clickedCard(n) {
+        const cards = document.getElementsByClassName('card');
+
+        for (let i = 0; i < cards.length; i++) {
+          cards[i].classList.remove('active');
+        }
+
+        const card = document.getElementById(`card-${n}`);
+        card.classList.add('active');
+      }
+    </script>
+  </body>
+</html>
